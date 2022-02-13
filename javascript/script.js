@@ -24,6 +24,7 @@ const geolocate= new mapboxgl.GeolocateControl(
     trackUserLocation: true,
     showUserHeading: true
   })
+
 map.addControl(geolocate);
 
 geolocate.on('geolocate', function(e) {
