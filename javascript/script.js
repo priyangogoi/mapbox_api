@@ -20,8 +20,7 @@ function errorLocation(){
     });
   }
 
-  const nav = new mapboxgl.NavigationControl();
-map.addControl(nav);
+  map.addControl(new mapboxgl.NavigationControl());
 
 var directions = new MapboxDirections({
   accessToken: 'mapboxgl.accessToken',
