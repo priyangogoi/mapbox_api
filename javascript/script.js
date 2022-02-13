@@ -18,17 +18,18 @@ function errorLocation(){
       center:center, 
       zoom:15
     });
+     
+    const nav=new mapboxgl.NavigationControl();
+    map.addControl(nav);
+
+    var directions = new MapboxDirections({
+      accessToken: 'mapboxgl.accessToken',
+    });
+    
+    map.addControl(directions, 'top-left');    
   }
 
-  map.addControl(new mapboxgl.NavigationControl());
-
-var directions = new MapboxDirections({
-  accessToken: 'mapboxgl.accessToken',
-});
-
-map.addControl(directions, 'top-left');
-
-
+  
 // const geolocate= new mapboxgl.GeolocateControl(
 //   {
 //     positionOptions: { enableHighAccuracy: true }, 
