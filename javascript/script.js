@@ -8,7 +8,7 @@ function successLocation(position){
   setupMap([position.coords.longitude, position.coords.latitude])
 }
 function errorLocation(){
-  
+  setupMap([-2.24, 53.48])
 }
 
   function setupMap(center){
