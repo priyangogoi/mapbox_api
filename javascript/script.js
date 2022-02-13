@@ -20,6 +20,20 @@ function errorLocation(){
     });
   }
 
+  const nav = new mapboxgl.NavigationControl();
+map.addControl(nav);
+
+var directions = new MapboxDirections({
+  accessToken: 'mapboxgl.accessToken',
+});
+
+var map = new mapboxgl.Map({
+  container: 'map',
+  style: 'mapbox://styles/mapbox/streets-v9'
+});
+
+map.addControl(directions, 'top-left');
+
 
 // const geolocate= new mapboxgl.GeolocateControl(
 //   {
