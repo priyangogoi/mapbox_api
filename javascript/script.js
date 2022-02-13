@@ -6,20 +6,30 @@ var map = new mapboxgl.Map({
   style: 'mapbox://styles/mapbox/streets-v11'
 });
 
-const geolocate= new mapboxgl.GeolocateControl(
-  {
-    positionOptions: { enableHighAccuracy: true }, 
-    trackUserLocation: true,
-    showUserHeading: true
-  })
-map.addControl(geolocate);
+navigator.geolocation.getCurrentPosition(successLocation, errorLocation, {
+  enableHighAccuracy:true
+})
+function successLocation(position){
+  console.log(position);
+}
+function errorLocation(){
 
-geolocate.on('geolocate', function(e) {
-      var lon = e.coords.longitude;
-      var lat = e.coords.latitude
-      var position = [lon, lat];
-      console.log(position);
-});
+}
+
+// const geolocate= new mapboxgl.GeolocateControl(
+//   {
+//     positionOptions: { enableHighAccuracy: true }, 
+//     trackUserLocation: true,
+//     showUserHeading: true
+//   })
+// map.addControl(geolocate);
+
+// geolocate.on('geolocate', function(e) {
+//       var lon = e.coords.longitude;
+//       var lat = e.coords.latitude
+//       var position = [lon, lat];
+//       console.log(position);
+// });
 
    // When active the map will receive updates to the device's location as it changes.
 
