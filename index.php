@@ -18,7 +18,7 @@
           width: 100vw;
         }
     </style>
-    <script src="/blob/master/javascript/script.js" defer></script>
+    <script src="https://github.com/priyangogoi/mapbox_api/blob/master/javascript/script.js" defer></script>
 </head>
 <body>
 
