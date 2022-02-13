@@ -18,7 +18,8 @@
           width: 100vw;
         }
     </style>
-    <script type="text/javascript" src="javascript/script.js" defer></script>
+    <script src="javascript/script.js" defer></script>
+
 </head>
 <body>
 

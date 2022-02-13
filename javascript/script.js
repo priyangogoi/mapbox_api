@@ -6,6 +6,7 @@ var map = new mapboxgl.Map({
   style: 'mapbox://styles/mapbox/streets-v11'
 });
 
+<<<<<<< HEAD
 // navigator.geolocation.getCurrentPosition(successLocation, errorLocation, {
 //   enableHighAccuracy:true
 // })
@@ -35,6 +36,35 @@ geolocate.on('geolocate', function(e) {
       //console.log(position);
       console.log(e)
 });
+=======
+
+
+navigator.geolocation.getCurrentPosition(successLocation, errorLocation, {
+  enableHighAccuracy:true
+})
+function successLocation(position){
+  console.log(position);
+}
+function errorLocation(){
+
+}
+
+// const geolocate= new mapboxgl.GeolocateControl(
+//   {
+//     positionOptions: { enableHighAccuracy: true }, 
+//     trackUserLocation: true,
+//     showUserHeading: true
+//   })
+
+// map.addControl(geolocate);
+
+// geolocate.on('geolocate', function(e) {
+//       var lon = e.coords.longitude;
+//       var lat = e.coords.latitude
+//       var position = [lon, lat];
+//       console.log(position);
+// });
+>>>>>>> a924c887e04b20c177d210cd74d2510f9a2f52aa
 
  
 
