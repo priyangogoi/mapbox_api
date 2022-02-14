@@ -33,8 +33,7 @@ mapboxgl.accessToken = 'pk.eyJ1IjoicHJpeWFuZ29nb2kiLCJhIjoiY2t6am95bm42MG5nNzJ1b
   var map = new mapboxgl.Map({
     container: 'map',
     style: 'mapbox://styles/mapbox/streets-v11', 
-    center:center, 
-    zoom:15
+    zoom:5
   });
    
   
@@ -47,7 +46,8 @@ const geolocate= new mapboxgl.GeolocateControl(
 
     showUserHeading: true
   })
-map.addControl(geolocate);
+
+  map.addControl(geolocate);
 
 geolocate.on('geolocate', function(e) {
       var lon = e.coords.longitude;
@@ -57,16 +57,24 @@ geolocate.on('geolocate', function(e) {
       setupMap(position);
 });
 
+const nav=new mapboxgl.NavigationControl();
+map.addControl(nav);
  
 
 function setupMap(center){
 
-  const nav=new mapboxgl.NavigationControl();
-  map.addControl(nav);
-
+  var map = new mapboxgl.Map({
+    container: 'map',
+    style: 'mapbox://styles/mapbox/streets-v11', 
+    center:center, 
+    zoom:15
+  });
+   
   var directions = new MapboxDirections({
     accessToken: 'pk.eyJ1IjoicHJpeWFuZ29nb2kiLCJhIjoiY2t6am95bm42MG5nNzJ1bGw3cnY0b3g0cyJ9.hzWoULXbbjFmxwbmmstHWA',
   });
   
   map.addControl(directions, 'top-left');    
+
+  
 }
