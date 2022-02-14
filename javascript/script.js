@@ -39,7 +39,7 @@ const geolocate= new mapboxgl.GeolocateControl(
 
     showUserHeading: true
   })
-map.addControl(geolocate);
+
 
 geolocate.on('geolocate', function(e) {
       var lon = e.coords.longitude;
@@ -58,7 +58,9 @@ function setupMap(center){
     center:center, 
     zoom:15
   });
-   
+  
+  map.addControl(geolocate);
+
   const nav=new mapboxgl.NavigationControl();
   map.addControl(nav);
 
