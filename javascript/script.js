@@ -1,33 +1,33 @@
 mapboxgl.accessToken = 'pk.eyJ1IjoicHJpeWFuZ29nb2kiLCJhIjoiY2t6am95bm42MG5nNzJ1bGw3cnY0b3g0cyJ9.hzWoULXbbjFmxwbmmstHWA';
 
-navigator.geolocation.getCurrentPosition(successLocation, errorLocation, {
-  enableHighAccuracy:true
-})
-function successLocation(position){
-  console.log(position);
-  setupMap([position.coords.longitude, position.coords.latitude])
-}
-function errorLocation(){
-  setupMap([-2.24, 53.48])
-}
+// navigator.geolocation.getCurrentPosition(successLocation, errorLocation, {
+//   enableHighAccuracy:true
+// })
+// function successLocation(position){
+//   console.log(position);
+//   setupMap([position.coords.longitude, position.coords.latitude])
+// }
+// function errorLocation(){
+//   setupMap([-2.24, 53.48])
+// }
 
-  function setupMap(center){
-    var map = new mapboxgl.Map({
-      container: 'map',
-      style: 'mapbox://styles/mapbox/streets-v11', 
-      center:center, 
-      zoom:15
-    });
+  // function setupMap(center){
+  //   var map = new mapboxgl.Map({
+  //     container: 'map',
+  //     style: 'mapbox://styles/mapbox/streets-v11', 
+  //     center:center, 
+  //     zoom:15
+  //   });
      
-    const nav=new mapboxgl.NavigationControl();
-    map.addControl(nav);
+  //   const nav=new mapboxgl.NavigationControl();
+  //   map.addControl(nav);
 
-    var directions = new MapboxDirections({
-      accessToken: 'mapboxgl.accessToken',
-    });
+  //   var directions = new MapboxDirections({
+  //     accessToken: 'pk.eyJ1IjoicHJpeWFuZ29nb2kiLCJhIjoiY2t6am95bm42MG5nNzJ1bGw3cnY0b3g0cyJ9.hzWoULXbbjFmxwbmmstHWA',
+  //   });
     
-    map.addControl(directions, 'top-left');    
-  }
+  //   map.addControl(directions, 'top-left');    
+  // }
 
   
 // const geolocate= new mapboxgl.GeolocateControl(
@@ -41,14 +41,30 @@ function errorLocation(){
 //   })
 // map.addControl(geolocate);
 
-// geolocate.on('geolocate', function(e) {
-//       // var lon = e.coords.longitude;
-//       // var lat = e.coords.latitude;
-//       // var position = [lon, lat];
-//       //console.log(position);
-//       console.log(e)
-// });
+geolocate.on('geolocate', function(e) {
+      var lon = e.coords.longitude;
+      var lat = e.coords.latitude;
+      var position = [lon, lat];
+      console.log(position);
+      setupMap(position);
+});
 
  
 
- 
+function setupMap(center){
+  var map = new mapboxgl.Map({
+    container: 'map',
+    style: 'mapbox://styles/mapbox/streets-v11', 
+    center:center, 
+    zoom:15
+  });
+   
+  const nav=new mapboxgl.NavigationControl();
+  map.addControl(nav);
+
+  var directions = new MapboxDirections({
+    accessToken: 'pk.eyJ1IjoicHJpeWFuZ29nb2kiLCJhIjoiY2t6am95bm42MG5nNzJ1bGw3cnY0b3g0cyJ9.hzWoULXbbjFmxwbmmstHWA',
+  });
+  
+  map.addControl(directions, 'top-left');    
+}
