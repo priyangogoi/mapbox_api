@@ -6,11 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mapbox API</title>
    
-    <script src='https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.js'></script>
+    <!-- <script src='https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.js'></script>
     <link href='https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.css' rel='stylesheet' />
     <script src="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-directions/v4.1.0/mapbox-gl-directions.js"></script>
     <link rel="stylesheet" href="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-directions/v4.1.0/mapbox-gl-directions.css" type="text/css">
-    
+     -->
     <style>
       body{
         margin:0;
@@ -26,6 +26,10 @@
 <body>
 
     <div id='map'></div>
-    
+    <form id="signup">
+    <input type="tel" name="Phone" id="phone" placeholder="Phone No.">
+    <input type="password" name="pwd" id="pwd">
+    <input type="submit" value="">
+    </form>
 </body>
 </html>
