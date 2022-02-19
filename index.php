@@ -12,13 +12,13 @@
     <link rel="stylesheet" href="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-directions/v4.1.0/mapbox-gl-directions.css" type="text/css">
      -->
     <style>
-      body{
+      /* body{
         margin:0;
-      }
-        #map{
+      } */
+        /* #map{
           height: 100vh;
           width: 100vw;
-        }
+        } */
     </style>
     <script src="javascript/script.js" defer></script>
 
@@ -28,8 +28,8 @@
     <div id='map'></div>
     <form id="signup">
     <input type="tel" name="Phone" id="phone" placeholder="Phone No.">
-    <input type="password" name="pwd" id="pwd">
-    <input type="submit" value="">
+    <input type="password" name="pwd" id="pwd" placeholder="Password">
+    <input type="submit" value="submit">
     </form>
 </body>
 </html>
