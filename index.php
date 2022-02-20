@@ -31,7 +31,7 @@ try{
     <script src="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-directions/v4.1.0/mapbox-gl-directions.js"></script>
     <link rel="stylesheet" href="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-directions/v4.1.0/mapbox-gl-directions.css" type="text/css">
      -->
-    <style>
+<!--     
       /* body{
         margin:0;
       } */
@@ -39,7 +39,7 @@ try{
           height: 100vh;
           width: 100vw;
         } */
-    /* </style>
+    /* -->
 <!--     <script src="javascript/script.js" defer></script>
 
 </head>
