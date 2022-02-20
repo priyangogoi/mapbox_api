@@ -1,11 +1,31 @@
-<!-- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mapbox API</title>
-    -->
+
+</head>
+<body>
+
+<?php
+
+try{
+
+    $myPDO=new PDO("pgsql:host=ec2-52-73-149-159.compute-1.amazonaws.com; dbname=d5amlc2e2jbdhf;", "mdywqgrhlhywqn", "bec6970d84f2b5b172ddb8164b05f1310f6cc185278913745fe6befd0e2efc40");
+
+    echo '<script>alert("Connected to postgres");</script>';
+
+} catch(PDOException $e){
+
+    echo $e->getMessage();
+}
+
+?>
+
+</body>
+</html>   
     <!-- <script src='https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.js'></script>
     <link href='https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.css' rel='stylesheet' />
     <script src="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-directions/v4.1.0/mapbox-gl-directions.js"></script>
@@ -35,24 +55,3 @@
 </html> 
  -->
 
-<?php
-
-try{
-
-    $myPDO=new PDO("pgsql:host=ec2-52-73-149-159.compute-1.amazonaws.com; dbname=d5amlc2e2jbdhf;", "mdywqgrhlhywqn", "bec6970d84f2b5b172ddb8164b05f1310f6cc185278913745fe6befd0e2efc40");
-
-    echo '<script>alert("Connected to postgres");</script>';
-
-} catch(PDOException $e){
-
-    echo $e->getMessage();
-}
-
-
-
-
-
-
-
-
-?>
