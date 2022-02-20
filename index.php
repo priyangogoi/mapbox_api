@@ -39,7 +39,7 @@
 
 try{
 
-    $myPDO=new PDO("pgsql:host=ec2-52-73-149-159.compute-1.amazonaws.com; dbname=d5amlc2e2jbdhf", "mdywqgrhlhywqn", "bec6970d84f2b5b172ddb8164b05f1310f6cc185278913745fe6befd0e2efc40");
+    $myPDO=new PDO("pgsql:host=ec2-52-73-149-159.compute-1.amazonaws.com; dbname=d5amlc2e2jbdhf", "mdywqgrhlhywqn", "bec6970d84f2b5b172ddb8164b05f1310f6cc18527891");
 
     echo 'Connected to POSTGRES';
 
