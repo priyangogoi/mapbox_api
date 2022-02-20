@@ -19,7 +19,7 @@
           height: 100vh;
           width: 100vw;
         } */
-    </style>
+    /* </style>
     <script src="javascript/script.js" defer></script>
 
 </head>
@@ -32,4 +32,27 @@
     <input type="submit" value="submit">
     </form>
 </body>
-</html>
+</html> */
+
+
+<?php
+
+try{
+
+    $myPDO=new PDO("pgsql:host=ec2-52-73-149-159.compute-1.amazonaws.com; dbname=d5amlc2e2jbdhf", "mdywqgrhlhywqn", "bec6970d84f2b5b172ddb8164b05f1310f6cc185278913745fe6befd0e2efc40");
+
+    echo '<script>console.log("Connected to POSTGRES")</script>';
+
+} catch(PDOException $e){
+
+    echo $e->getMessage();
+}
+
+
+
+
+
+
+
+
+?>
