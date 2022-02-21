@@ -105,7 +105,7 @@
 document.getElementById("signupform").addEventListener("submit", (e)=>{
   const phone=document.getElementById("signupPhone").value;
   const pwd=document.getElementById("signupPwd").value;
-  let stmt="phone="+phone+"pwd="+pwd;
+  let stmt="phone="+phone+"&pwd="+pwd;
   let xhr=new XMLHttpRequest();
   xhr.open("POST", "conn.php", true);
   xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
