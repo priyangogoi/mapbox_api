@@ -11,7 +11,7 @@
 
 <div class="container">
   <div class="section">
-    <form id="signupform" method="get">
+    <form id="signupform">
       <input type="number" name="phone" id="signupPhone" placeholder="Phone no.">
       <input type="password" name="pwd" id="signupPwd" placeholder="Password">
       <input type="submit" value="Signup">
