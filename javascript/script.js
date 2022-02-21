@@ -85,19 +85,33 @@
 // // });
 
 
-document.getElementById("signup").addEventListener("submit", (e)=>{
-  e.preventDefault();
-  const phone=document.getElementById("phone").value;
-  const pwd= document.getElementById("pwd").value;
+// document.getElementById("signup").addEventListener("submit", (e)=>{
+//   e.preventDefault();
+//   const phone=document.getElementById("phone").value;
+//   const pwd= document.getElementById("pwd").value;
+//   let stmt="phone="+phone+"pwd="+pwd;
+//   let xhr=new XMLHttpRequest();
+//   xhr.open("POST", "conn.php", true);
+//   xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+//   xhr.onload=function(){
+//     console.log(this.responseText);
+// }
+
+// xhr.send(stmt);
+
+// })
+ 
+
+document.getElementById("signupform").addEventListener("submit", (e)=>{
+  const phone=document.getElementById("signupPhone").value;
+  const pwd=document.getElementById("signupPwd").value;
   let stmt="phone="+phone+"pwd="+pwd;
   let xhr=new XMLHttpRequest();
   xhr.open("POST", "conn.php", true);
   xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
   xhr.onload=function(){
     console.log(this.responseText);
-}
+  }
 
-xhr.send(stmt);
-
+  xhr.send(stmt);
 })
- 
