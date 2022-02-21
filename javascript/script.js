@@ -103,6 +103,7 @@
  
 
 document.getElementById("signupform").addEventListener("submit", (e)=>{
+  e.preventDefault();
   const phone=document.getElementById("signupPhone").value;
   const pwd=document.getElementById("signupPwd").value;
   let stmt="phone="+phone+"&pwd="+pwd;
