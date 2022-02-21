@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mapbox API</title>
-  <script src="javascript/script.js" defer></script>
+  
 </head>
 <body>
 
@@ -18,7 +18,7 @@
     </form>
   </div>
 </div>
-
+<script src="javascript/script.js"></script>
 </body>
 </html>   
     <!-- <script src='https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.js'></script>
