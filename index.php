@@ -22,7 +22,7 @@ try{
 
   $myPDO=new PDO("pgsql:host=ec2-52-73-149-159.compute-1.amazonaws.com; dbname=d5amlc2e2jbdhf;", "mdywqgrhlhywqn", "bec6970d84f2b5b172ddb8164b05f1310f6cc185278913745fe6befd0e2efc40");
 
-  $sqlins= "INSERT INTO users(userphone, userpwd) VALUES ('9987654321', '12adwdred')";
+  $sqlins= "INSERT INTO users(userphone, userpwd) VALUES ('9954321567', 'sanandreas')";
   $myPDO->query($sqlins);
   $sqlfetc="SELECT * FROM users";
   foreach($myPDO->query($sqlfetc) as $row){
