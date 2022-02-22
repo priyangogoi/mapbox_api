@@ -118,8 +118,8 @@ document.getElementById("signupform").addEventListener("submit", (e)=>{
     }
     
     xhr.send(stmt);
-    phone.value="";
-    pwd.value="";
+    // phone.value="";
+    // pwd.value="";
   }
  
   
