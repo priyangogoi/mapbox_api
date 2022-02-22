@@ -11,8 +11,9 @@ $myPDO->query($sqlins);
 $sqlfetc="SELECT * FROM users";
 foreach($myPDO->query($sqlfetc) as $row){
   print "<br/>";
-  print $row['userid'].'-'.$row['userphone'].'-'.$row['userpwd'].'<br/>';
+  // print $row['userid'].'-'.$row['userphone'].'-'.$row['userpwd'].'<br/>';
   header("Location: ./frontend/home.php");
+  exit();
 }
 
 } catch(PDOException $e){
