@@ -116,12 +116,11 @@ document.getElementById("signupform").addEventListener("submit", (e)=>{
     xhr.onload=function(){
       console.log(this.responseText);
     }
-    
     xhr.send(stmt);
-    // phone.value="";
-    // pwd.value="";
   }
  
   
 })
+  phone.value="";
+  pwd.value="";
 
