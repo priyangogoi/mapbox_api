@@ -11,14 +11,14 @@
 
 <div class="container">
   <div class="section">
-    <form action="conn.php" id="signupform" method="POST">
+    <form id="signupform">
       <input type="number" name="phone" id="signupPhone" placeholder="Phone no.">
       <input type="password" name="pwd" id="signupPwd" placeholder="Password">
       <input type="submit" value="Signup">
     </form>
   </div>
 </div>
-<!-- <script src="javascript/script.js"></script> -->
+<script src="javascript/script.js"></script>
 </body>
 </html>   
     <!-- <script src='https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.js'></script>

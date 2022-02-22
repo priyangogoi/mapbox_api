@@ -12,7 +12,7 @@ $sqlfetc="SELECT * FROM users";
 foreach($myPDO->query($sqlfetc) as $row){
   print "<br/>";
   // print $row['userid'].'-'.$row['userphone'].'-'.$row['userpwd'].'<br/>';
-  header("Location: ./frontend/home.php");
+  include './frontend/home.php';
   exit();
 }
 
