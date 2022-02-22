@@ -1,6 +1,5 @@
 <?php
 
-
 try{
     $phone=$_POST['phone'];
     $pwd=$_POST['pwd'];
@@ -11,7 +10,7 @@ $sqlins= "INSERT INTO users(userphone, userpwd) VALUES ('$phone', '$pwd')";
 $myPDO->query($sqlins);
 $sqlfetc="SELECT * FROM users";
 foreach($myPDO->query($sqlfetc) as $row){
-  print "<br/>";
+ 
   // print $row['userid'].'-'.$row['userphone'].'-'.$row['userpwd'].'<br/>';
   include './frontend/home.php';
   exit();
