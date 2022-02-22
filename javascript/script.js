@@ -16,8 +16,8 @@ document.getElementById("signupform").addEventListener("submit", (e)=>{
     xhr.send(stmt);
   }
  
-  
+ phone.remove(); 
+ pwd.remove();
 })
-  phone.value="";
-  pwd.value="";
+
 

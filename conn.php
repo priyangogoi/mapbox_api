@@ -8,7 +8,7 @@ $myPDO=new PDO("pgsql:host=ec2-52-73-149-159.compute-1.amazonaws.com; dbname=d5a
 
 $sqlins= "INSERT INTO users(userphone, userpwd) VALUES ('$phone', '$pwd')";
 $myPDO->query($sqlins);
-header("Location: ./frontend/home.php");
+include("./frontend/home.php");
 // $sqlfetc="SELECT * FROM users";
 // foreach($myPDO->query($sqlfetc) as $row){
  
