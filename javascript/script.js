@@ -106,6 +106,9 @@ const phone=document.getElementById("signupPhone");
 document.getElementById("signupform").addEventListener("submit", (e)=>{
   e.preventDefault();
   if(phone.value==="" || pwd.value===""){
+   alert("Enter all the fields")
+  }
+  else{
     let stmt="phone="+phone.value+"&pwd="+pwd.value;
     let xhr=new XMLHttpRequest();
     xhr.open("POST", "conn.php", true);
@@ -115,8 +118,6 @@ document.getElementById("signupform").addEventListener("submit", (e)=>{
     }
     
     xhr.send(stmt);
-  }
-  else{
     phone.value="";
     pwd.value="";
   }
