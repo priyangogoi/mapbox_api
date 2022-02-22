@@ -101,21 +101,26 @@
 
 // })
  
-
+const phone=document.getElementById("signupPhone");
+  const pwd=document.getElementById("signupPwd");
 document.getElementById("signupform").addEventListener("submit", (e)=>{
   e.preventDefault();
-  const phone=document.getElementById("signupPhone");
-  const pwd=document.getElementById("signupPwd");
-  let stmt="phone="+phone.value+"&pwd="+pwd.value;
-  let xhr=new XMLHttpRequest();
-  xhr.open("POST", "conn.php", true);
-  xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-  xhr.onload=function(){
-    console.log(this.responseText);
+  if(phone.value==="" || pwd.value===""){
+    let stmt="phone="+phone.value+"&pwd="+pwd.value;
+    let xhr=new XMLHttpRequest();
+    xhr.open("POST", "conn.php", true);
+    xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+    xhr.onload=function(){
+      console.log(this.responseText);
+    }
+    
+    xhr.send(stmt);
   }
-  
-  xhr.send(stmt);
-  
-  phone.innerHTML="";
+  else{
+    phone.value="";
+    pwd.value="";
+  }
+ 
   
 })
+
