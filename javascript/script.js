@@ -18,7 +18,7 @@ document.getElementById("signupform").addEventListener("submit", (e)=>{
  
  
 })
-phone.remove(); 
- pwd.remove();
+phone.value="";
+pwd.value="";
 
 
