@@ -104,9 +104,9 @@
 
 document.getElementById("signupform").addEventListener("submit", (e)=>{
   e.preventDefault();
-  const phone=document.getElementById("signupPhone").value;
-  const pwd=document.getElementById("signupPwd").value;
-  let stmt="phone="+phone+"&pwd="+pwd;
+  const phone=document.getElementById("signupPhone");
+  const pwd=document.getElementById("signupPwd");
+  let stmt="phone="+phone.value+"&pwd="+pwd.value;
   let xhr=new XMLHttpRequest();
   xhr.open("POST", "conn.php", true);
   xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
@@ -115,4 +115,7 @@ document.getElementById("signupform").addEventListener("submit", (e)=>{
   }
   
   xhr.send(stmt);
+  
+  phone.innerHTML="";
+  
 })
