@@ -8,13 +8,14 @@ $myPDO=new PDO("pgsql:host=ec2-52-73-149-159.compute-1.amazonaws.com; dbname=d5a
 
 $sqlins= "INSERT INTO users(userphone, userpwd) VALUES ('$phone', '$pwd')";
 $myPDO->query($sqlins);
-$sqlfetc="SELECT * FROM users";
-foreach($myPDO->query($sqlfetc) as $row){
+header("Location: ./frontend/home.php");
+// $sqlfetc="SELECT * FROM users";
+// foreach($myPDO->query($sqlfetc) as $row){
  
-  // print $row['userid'].'-'.$row['userphone'].'-'.$row['userpwd'].'<br/>';
-  header("Location: ./frontend/home.php");
-  exit();
-}
+//   // print $row['userid'].'-'.$row['userphone'].'-'.$row['userpwd'].'<br/>';
+//  
+//   exit();
+// }
 
 } catch(PDOException $e){
 
