@@ -7,7 +7,7 @@
     <title>Mapbox API</title>
   
 </head>
-<body>
+<body id="body">
 
 <div class="container">
   <div class="section">
