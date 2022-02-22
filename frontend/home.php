@@ -19,7 +19,7 @@
           width: 100vw;
         }
     </style>
-     <script src="../javascript/script.js"></script>
+     <script src="../frontend/frontScript.js" defer></script>
 
 </head>
 <body>
