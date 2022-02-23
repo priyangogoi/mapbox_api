@@ -55,7 +55,7 @@ function setupMap(center){
     container: 'map',
     style: 'mapbox://styles/mapbox/streets-v11', 
     center:center, 
-    zoom:15
+    zoom:13
   });
 
     var directions = new MapboxDirections({
