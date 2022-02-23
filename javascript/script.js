@@ -13,9 +13,9 @@ document.getElementById("signupform").addEventListener("submit", (e)=>{
     xhr.onload=function(){
     document.getElementsByClassName("main").innerHTML+=this.responseText;
     }
-    
+    xhr.send(stmt);
   }
-  xhr.send(stmt);
+  
  
 })
 phone.value="";
