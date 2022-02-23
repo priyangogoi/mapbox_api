@@ -14,7 +14,7 @@ foreach($myPDO->query($sqlfetc) as $row){
  
   print $row['userid'].'-'.$row['userphone'].'-'.$row['userpwd'].'<br/>';
  
-  exit();
+ 
 }
 
 } catch(PDOException $e){
