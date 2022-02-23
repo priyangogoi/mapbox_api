@@ -10,9 +10,9 @@ document.getElementById("signupform").addEventListener("submit", (e)=>{
     let xhr=new XMLHttpRequest();
     xhr.open("POST", "conn.php", true);
     xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-    xhr.onload=function(){
-     document.getElementsByTagName("body").innerHTML=this.responseText;
-    }
+    // xhr.onload=function(){
+    //  document.getElementsByTagName("body").innerHTML=this.responseText;
+    // }
     xhr.send(stmt);
   }
  
