@@ -7,9 +7,10 @@
     <title>Mapbox API</title>
   
 </head>
-<body id="body">
+<body>
 
 <div class="container">
+  <div class="main"></div>
   <div class="section">
     <form id="signupform">
       <input type="number" name="phone" id="signupPhone" placeholder="Phone no.">
