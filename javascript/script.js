@@ -13,9 +13,9 @@ document.getElementById("signupform").addEventListener("submit", (e)=>{
     xhr.onload=function(){
     location.href='./frontend/home.php';
     }
-    xhr.send(stmt);
+    
   }
- 
+  xhr.send(stmt);
  
 })
 phone.value="";
