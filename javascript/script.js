@@ -11,7 +11,7 @@ document.getElementById("signupform").addEventListener("submit", (e)=>{
     xhr.open("POST", "conn.php", true);
     xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
     xhr.onload=function(){
-     document.getElementsByTagName("body").innerHTML=this.responseText;
+    console.log(this.responseText);
     }
     xhr.send(stmt);
   }
