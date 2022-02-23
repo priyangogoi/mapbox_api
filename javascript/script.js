@@ -11,7 +11,7 @@ document.getElementById("signupform").addEventListener("submit", (e)=>{
     xhr.open("POST", "conn.php", true);
     xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
     xhr.onload=function(){
-    location.href='./frontend/home.php';
+    document.getElementsByClassName("main").innerHTML+=this.responseText;
     }
     
   }
