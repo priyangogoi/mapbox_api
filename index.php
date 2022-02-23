@@ -12,7 +12,7 @@
 <div class="container">
   <div class="main"></div>
   <div class="section">
-    <form id="signupform">
+    <form action="conn.php" method="POST" id="signupform">
       <input type="number" name="phone" id="signupPhone" placeholder="Phone no.">
       <input type="password" name="pwd" id="signupPwd" placeholder="Password">
       <input type="submit" value="Signup">
