@@ -15,8 +15,8 @@
         margin:0;
       } 
      #map{
-          height: 40vh;
-          width: 50vw;
+          height: 100vh;
+          width: 100vw;
         }
     </style>
      <script src="../frontend/frontScript.js" defer></script>
