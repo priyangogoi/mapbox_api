@@ -5,7 +5,7 @@ var map = new mapboxgl.Map({
   container: 'map',
   style: 'mapbox://styles/mapbox/streets-v11', 
   center:[95.35680033297228, 27.488665589483862],
-  zoom:14
+  zoom:13
 });
 
   function success(position){
@@ -33,7 +33,7 @@ var map = new mapboxgl.Map({
   showUserHeading: true
   });
   //Adding geolocation control button
-  map.addControl(geolocate);
+//   map.addControl(geolocate);
   //Adding Zoom control button 
   const nav=new mapboxgl.NavigationControl()
   map.addControl(nav);

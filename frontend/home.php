@@ -9,21 +9,26 @@
     <link href='https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.css' rel='stylesheet' />
     <script src="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-directions/v4.1.0/mapbox-gl-directions.js"></script>
     <link rel="stylesheet" href="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-directions/v4.1.0/mapbox-gl-directions.css" type="text/css">
-    
+    <script src="https://kit.fontawesome.com/26eb5e7fbc.js" crossorigin="anonymous"></script>
    <style>  
       body{
         margin:0;
       } 
      #map{
-          height: 100vh;
+          height: 50vh;
           width: 100vw;
         }
     </style>
      <script src="../frontend/frontScript.js" defer></script>
-
+     
 </head>
 <body>
 <div id='map'></div>
+<form id="book-form">
+<i class="fa-solid fa-location-crosshairs"></i>
+    
+</form>
+
 </body>
 </html>
 
