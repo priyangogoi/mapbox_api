@@ -11,7 +11,7 @@ body { margin: 0; padding: 0; }
     width: 90%;
     left: 30%;
     margin-left: -25%;
-    bottom: 22%;
+    top: 12%;
     
 }
 .mapboxgl-ctrl-geocoder {
@@ -21,7 +21,7 @@ body { margin: 0; padding: 0; }
     
     .btn{
         position: absolute;
-        z-index: 1;
+     
         bottom:11%;
         left:40%;
     }
