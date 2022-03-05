@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,6 +11,9 @@
     <script src="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-directions/v4.1.0/mapbox-gl-directions.js"></script>
     <link rel="stylesheet" href="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-directions/v4.1.0/mapbox-gl-directions.css" type="text/css">
     <script src="https://kit.fontawesome.com/26eb5e7fbc.js" crossorigin="anonymous"></script>
+    <script src='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.7.0/mapbox-gl-geocoder.min.js'></script>
+    <link rel='stylesheet' href='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.7.0/mapbox-gl-geocoder.css' type='text/css' />
+
    <style>  
       body{
         margin:0;
@@ -18,16 +22,25 @@
           height: 50vh;
           width: 100vw;
         }
+        .pckuploc{
+            position: relative;
+        }
+        .pckuploc i{
+            position: absolute;
+        }
     </style>
+   
      <script src="../frontend/frontScript.js" defer></script>
      
 </head>
 <body>
 <div id='map'></div>
-<form id="book-form">
-<i class="fa-solid fa-location-crosshairs"></i>
-    
-</form>
+<div class="pckuploc">
+<input type="text" placeholder="Enter pickup location" id="pickUpBox">
+<a href="#" class="" id="locateMeBtn"><i class="fas fa-solid fa-location-arrow"></i></a> 
+</div>
+
+
 
 </body>
 </html>
