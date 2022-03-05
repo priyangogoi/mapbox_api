@@ -27,7 +27,7 @@ body { margin: 0; padding: 0; }
     }
     .timepicker{
         position: absolute;
-        z-index: 1;
+        
         right: 20%;
         bottom:17%;  
         border-style: none;
@@ -37,7 +37,7 @@ body { margin: 0; padding: 0; }
     } 
     #datepicker{
         position: absolute;
-        z-index: 1;
+       
         left: 20%;
         bottom:17%;  
         border-style: none;
