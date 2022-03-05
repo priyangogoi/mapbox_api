@@ -26,8 +26,8 @@ body { margin: 0; padding: 0; }
         left:40%;
     }
     .timepicker{
-        position: absolute;
-        
+        /* position: absolute;
+        z-index: 1; */
         right: 20%;
         bottom:17%;  
         border-style: none;
@@ -36,8 +36,8 @@ body { margin: 0; padding: 0; }
         background-color: rgba(107, 107, 107, 0.466);
     } 
     #datepicker{
-        position: absolute;
-       
+        /* position: absolute;
+        z-index: 1; */
         left: 20%;
         bottom:17%;  
         border-style: none;
