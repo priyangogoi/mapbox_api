@@ -19,22 +19,18 @@ zoom: 13
 //     console.log(results.features[0]);
 // });
 
-const geolocate=new mapboxgl.GeolocateControl({
-    positionOptions: {
-    enableHighAccuracy: true
-    },
-    fitBoundsOptions:{
-        maxZoom:15
-    },
-    // When active the map will receive updates to the device's location as it changes.
-    trackUserLocation: true,
-    // Draw an arrow next to the location dot to indicate which direction the device is heading.
-    showUserHeading: true
-
-    })
-// Add geolocate control to the map.
-map.addControl(geolocate);
-
+map.addControl(
+  new mapboxgl.GeolocateControl({
+  positionOptions: {
+  enableHighAccuracy: true
+  },
+  // When active the map will receive updates to the device's location as it changes.
+  trackUserLocation: true,
+  // Draw an arrow next to the location dot to indicate which direction the device is heading.
+  showUserHeading: true
+  })
+  );
+ 
 
 // function success(position){
 //     console.log(position)
