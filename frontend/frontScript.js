@@ -19,50 +19,50 @@ zoom: 13
 //     console.log(results.features[0]);
 // });
 
-map.addControl(
-  new mapboxgl.GeolocateControl({
-  positionOptions: {
-  enableHighAccuracy: true
-  },
-  // When active the map will receive updates to the device's location as it changes.
-  trackUserLocation: true,
-  // Draw an arrow next to the location dot to indicate which direction the device is heading.
-  showUserHeading: true
-  })
-  );
+// map.addControl(
+//   new mapboxgl.GeolocateControl({
+//   positionOptions: {
+//   enableHighAccuracy: true
+//   },
+//   // When active the map will receive updates to the device's location as it changes.
+//   trackUserLocation: true,
+//   // Draw an arrow next to the location dot to indicate which direction the device is heading.
+//   showUserHeading: true
+//   })
+//   );
  
 
-// function success(position){
-//     console.log(position)
-//     let lat=position.coords.latitude;
-//     let lon=position.coords.longitude;
-//     map.flyTo({
-//         center:[lon, lat],
-//         zoom: 15,
-//         bearing: 0,
+function success(position){
+    console.log(position)
+    let lat=position.coords.latitude;
+    let lon=position.coords.longitude;
+    map.flyTo({
+        center:[lon, lat],
+        zoom: 15,
+        bearing: 0,
          
-//         // These options control the flight curve, making it move
-//         // slowly and zoom out almost completely before starting
-//         // to pan.
-//         speed: 1.5, // make the flying slow
-//         curve: 1, // change the speed at which it zooms out
+        // These options control the flight curve, making it move
+        // slowly and zoom out almost completely before starting
+        // to pan.
+        speed: 1.5, // make the flying slow
+        curve: 1, // change the speed at which it zooms out
          
-//         // This can be any easing function: it takes a number between
-//         // 0 and 1 and returns another number between 0 and 1.
-//         easing: (t) => t,
+        // This can be any easing function: it takes a number between
+        // 0 and 1 and returns another number between 0 and 1.
+        easing: (t) => t,
          
-//         // this animation is considered essential with respect to prefers-reduced-motion
-//         essential: true
-//     })
+        // this animation is considered essential with respect to prefers-reduced-motion
+        essential: true
+    })
    
-//   }
-//   function error(err){
-//     console.warn(`ERROR(${err.code}): ${err.message}`);
-//   }
+  }
+  function error(err){
+    console.warn(`ERROR(${err.code}): ${err.message}`);
+  }
 
-//   navigator.geolocation.getCurrentPosition(success, error, {
-//     enableHighAccuracy:true
-//   });
+  navigator.geolocation.getCurrentPosition(success, error, {
+    enableHighAccuracy:true
+  });
 
 // for(let i=1;i<13;i++){
 //     document.getElementById("timepicker").innerHTML+=`<option value="${i}:00 AM">${i}:00 AM</option>`;

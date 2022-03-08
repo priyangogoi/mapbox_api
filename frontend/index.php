@@ -14,7 +14,7 @@ body { margin: 0; padding: 0; }
 <body>
 <script src="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.7.2/mapbox-gl-geocoder.min.js"></script>
 <link rel="stylesheet" href="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.7.2/mapbox-gl-geocoder.css" type="text/css">
-<script src="./frontScript.js" defer></script>
+
 <link rel="stylesheet" href="style.css">
  
 <div id="map"></div>
@@ -34,5 +34,6 @@ body { margin: 0; padding: 0; }
       <button type="submit" value="submit" class="btn" id="">Next<br>(2 clicks away)</button>
 </form>
 </div> 
+<script src="./frontScript.js" ></script>
 </body>
 </html>
