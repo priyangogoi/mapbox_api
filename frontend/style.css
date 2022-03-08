@@ -26,18 +26,18 @@ body { margin: 0; padding: 0; }
         left:40%;
     }
     .timepicker{
-        /* position: absolute;
-        z-index: 1; */
+        position: absolute;
+        z-index:1;
         right: 20%;
-        bottom:17%;  
+        bottom: 17%;  
         border-style: none;
         height: 2em;
         width: 5.5em;
         background-color: rgba(107, 107, 107, 0.466);
     } 
     #datepicker{
-        /* position: absolute;
-        z-index: 1; */
+        position: absolute;
+        z-index: 1;
         left: 20%;
         bottom:17%;  
         border-style: none;
