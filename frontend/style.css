@@ -22,10 +22,12 @@ body { margin: 0; padding: 0; }
     .btn{
         position: absolute;
      
-        bottom:11%;
+        bottom:9%;
         left:40%;
         background-color: rgba(107, 107, 107, 0.466);
+        border:none;
     }
+ 
     .timepicker{
         position: absolute;
         z-index:1;

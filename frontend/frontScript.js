@@ -7,17 +7,18 @@ zoom: 13
 });
  
 // Add the control to the map.
-// const geocoder = new MapboxGeocoder({
-// accessToken: mapboxgl.accessToken,
-// mapboxgl: mapboxgl,
-// placeholder: 'Add pickup location'
-// });
+const geocoder = new MapboxGeocoder({
+accessToken: mapboxgl.accessToken,
+mapboxgl: mapboxgl,
+placeholder: 'Add pickup location',
+zoom:15
+});
 
-// document.getElementById('geocoder').appendChild(geocoder.onAdd(map));
+document.getElementById('geocoder').appendChild(geocoder.onAdd(map));
 
-// geocoder.on('results', function(results){
-//     console.log(results.features[0]);
-// });
+geocoder.on('results', function(results){
+    console.log(results.features[0]);
+});
 
 // map.addControl(
 //   new mapboxgl.GeolocateControl({
@@ -30,12 +31,18 @@ zoom: 13
 //   showUserHeading: true
 //   })
 //   );
- 
+ function reverseGeo(long,lat){
+    fetch(`https://api.mapbox.com/geocoding/v5/mapbox.places/${long},${lat}.json?access_token=pk.eyJ1IjoicHJpeWFuZ29nb2kiLCJhIjoiY2t6am95bm42MG5nNzJ1bGw3cnY0b3g0cyJ9.hzWoULXbbjFmxwbmmstHWA`)
+    .then(res=>res.json())
+    .then(data=>console.log(data.features[0]));
+ }
 
 function success(position){
-    console.log(position)
+    
     let lat=position.coords.latitude;
     let lon=position.coords.longitude;
+    console.log(lat,lon);
+    
     map.flyTo({
         center:[lon, lat],
         zoom: 15,
@@ -54,6 +61,9 @@ function success(position){
         // this animation is considered essential with respect to prefers-reduced-motion
         essential: true
     })
+    const marker = new mapboxgl.Marker()
+    .setLngLat([lon,lat])
+    .addTo(map);
    
   }
   function error(err){
@@ -64,7 +74,7 @@ function success(position){
     enableHighAccuracy:true
   });
 
-// for(let i=1;i<13;i++){
-//     document.getElementById("timepicker").innerHTML+=`<option value="${i}:00 AM">${i}:00 AM</option>`;
-//     document.getElementById("timepicker").innerHTML+=`<option value="${i}:00 PM">${i}:00 PM</option>`;
-// }   
+for(let i=1;i<13;i++){
+    document.getElementById("timepicker").innerHTML+=`<option value="${i}:00 AM">${i}:00 AM</option>`;
+    document.getElementById("timepicker").innerHTML+=`<option value="${i}:00 PM">${i}:00 PM</option>`;
+}   
