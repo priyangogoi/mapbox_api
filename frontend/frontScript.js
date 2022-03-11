@@ -36,43 +36,49 @@ geocoder.on('results', function(results){
     .then(res=>res.json())
     .then(data=>console.log(data.features[0]));
  }
-
-function success(position){
+ var options = { enableHighAccuracy: true, maximumAge: 100, timeout: 60000 };
+ if( navigator.geolocation) {
+    var watchID = navigator.geolocation.watchPosition( gotPos, gotErr, options );
+    var timeout = setTimeout( function() { navigator.geolocation.clearWatch( watchID ); }, 5000 );
+ } else {
+    gotErr();
+ }
+// function success(position){
     
-    let lat=position.coords.latitude;
-    let lon=position.coords.longitude;
-    console.log(lat,lon);
+//     let lat=position.coords.latitude;
+//     let lon=position.coords.longitude;
+//     console.log(lat,lon);
     
-    map.flyTo({
-        center:[lon, lat],
-        zoom: 15,
-        bearing: 0,
+//     map.flyTo({
+//         center:[lon, lat],
+//         zoom: 15,
+//         bearing: 0,
          
-        // These options control the flight curve, making it move
-        // slowly and zoom out almost completely before starting
-        // to pan.
-        speed: 1.5, // make the flying slow
-        curve: 1, // change the speed at which it zooms out
+//         // These options control the flight curve, making it move
+//         // slowly and zoom out almost completely before starting
+//         // to pan.
+//         speed: 1.5, // make the flying slow
+//         curve: 1, // change the speed at which it zooms out
          
-        // This can be any easing function: it takes a number between
-        // 0 and 1 and returns another number between 0 and 1.
-        easing: (t) => t,
+//         // This can be any easing function: it takes a number between
+//         // 0 and 1 and returns another number between 0 and 1.
+//         easing: (t) => t,
          
-        // this animation is considered essential with respect to prefers-reduced-motion
-        essential: true
-    })
-    const marker = new mapboxgl.Marker()
-    .setLngLat([lon,lat])
-    .addTo(map);
+//         // this animation is considered essential with respect to prefers-reduced-motion
+//         essential: true
+//     })
+//     const marker = new mapboxgl.Marker()
+//     .setLngLat([lon,lat])
+//     .addTo(map);
    
-  }
-  function error(err){
-    console.warn(`ERROR(${err.code}): ${err.message}`);
-  }
+//   }
+//   function error(err){
+//     console.warn(`ERROR(${err.code}): ${err.message}`);
+//   }
 
-  navigator.geolocation.getCurrentPosition(success, error, {
-    enableHighAccuracy:true
-  });
+//   navigator.geolocation.getCurrentPosition(success, error, {
+//     enableHighAccuracy:true
+//   });
 
 for(let i=1;i<13;i++){
     document.getElementById("timepicker").innerHTML+=`<option value="${i}:00 AM">${i}:00 AM</option>`;
