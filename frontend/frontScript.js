@@ -70,9 +70,10 @@ function success(position){
     console.warn(`ERROR(${err.code}): ${err.message}`);
   }
 
-  navigator.geolocation.getCurrentPosition(success, error, {
-    enableHighAccuracy: false, timeout: 5000});
-
+  navigator.geolocation.watchPosition(success, error, {
+    enableHighAccuracy: false, timeout: 5000
+  });
+  
 for(let i=1;i<13;i++){
     document.getElementById("timepicker").innerHTML+=`<option value="${i}:00 AM">${i}:00 AM</option>`;
     document.getElementById("timepicker").innerHTML+=`<option value="${i}:00 PM">${i}:00 PM</option>`;
